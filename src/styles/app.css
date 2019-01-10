@@ -1,0 +1,32 @@
+
+body, #outlet {
+  height: 100vh;
+}
+
+.columns {
+  max-width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.column {
+  border: 1px solid black;
+  flex: 0.1;
+  text-align: center;
+  padding: 0 5px;
+}
+
+button {
+  position: absolute;
+  font-size: x-large;
+  margin: auto;
+  bottom: 5%;
+  left: 45%;
+  width: 10%;
+}
+
+.you-did-it {
+  text-align: center;
+  font-size: 400%;
+}
