@@ -9,27 +9,18 @@ const arrayEquals = (l, r) => l.length === r.length &&
 
 const ideal = ['ToDo', 'Doing', 'Measuring']
 
-const shrinkFont = fontSize => {
-  console.log(fontSize, 'shrinking')
-  const candidate = fontSize - 2
-  console.log(candidate, 'aiming for')
-  return candidate >= 40 ? candidate : 40
-}
-
 const state = {
-  columns: ideal,
-  fontSize: 100
+  columns: ideal
 }
 
 const actions = {
-  safeify: state => {
-    let c = arrayEquals(state.columns, ideal) ? [] : state.columns
+  safeify: columns => {
+    let c = arrayEquals(columns, ideal) ? [] : columns
 
     try {
       c.push(generate())
       return {
-        columns: c,
-        fontSize: shrinkFont(state.fontSize)
+        columns: c
       }
     } catch (error) {
       console.log(error)
